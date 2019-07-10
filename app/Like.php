@@ -11,4 +11,8 @@ class Like extends Model
         'user_id',
         'reply_id'
     ];
+
+    public function reply(){
+        return $this->belongsTo(Reply::class);
+    }
 }

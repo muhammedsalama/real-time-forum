@@ -3,12 +3,6 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Reply;
-use App\User;
-use App\Category;
-
-
-
 
 class Question extends Model
 {
