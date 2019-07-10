@@ -11,4 +11,9 @@ class Category extends Model
         'name',
         'slug'
     ];
+
+    public function questions(){
+        return $this->hasMany('App\Question');
+    }
+
 }

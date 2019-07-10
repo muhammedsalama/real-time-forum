@@ -18,13 +18,11 @@ class CreateRepliesTable extends Migration
             $table->integer('question_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->text('body');
-            $table->timestamps();
-
             /*make a foreign key to questions table
-            as when question deleted, all replies dependant on this question deleted too
-            */
-            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
-
+           as when question deleted, all replies dependant on this question deleted too
+           */
+            //$table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
