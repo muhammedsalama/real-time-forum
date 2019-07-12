@@ -7,11 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Reply extends Model
 {
     //
-    protected $fillable = [
+   /* protected $fillable = [
         'question_id',
         'user_id',
         'body'
-    ];
+    ];*/
+    protected $guarded = [];
 
     public function question(){
         return $this->belongsTo(Question::class);

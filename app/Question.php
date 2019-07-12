@@ -7,12 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
     //
-    protected $fillable = [
+    /*protected $fillable = [
         'title',
         'body',
         'slug',
-        'category_id'
-    ];
+        'category_id',
+        'user_id'
+    ];*/
+    protected $guarded = [];
 
     public function replies(){
         return $this->hasMany(Reply::class);
@@ -25,5 +27,6 @@ class Question extends Model
     public function category(){
         return $this->belongsTo(Category::class);
     }
+
 
 }
