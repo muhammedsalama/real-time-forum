@@ -16,8 +16,8 @@ class LikeController extends Controller
         return response('Reply Liked',Response::HTTP_OK);
     }
 
-    public function unlike(Reply $reply){
+    public function dislike(Reply $reply){
         $reply->likes()->delete();
-        return response('Reply unliked',Response::HTTP_NO_CONTENT);
+        return response('Reply disliked',Response::HTTP_NO_CONTENT);
     }
 }
