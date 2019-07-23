@@ -19,7 +19,7 @@ Vue.use(Vuetify)
  * Vue components. It will recursively scan this directory for the Vue
  * components and automatically register them with their "basename".
  *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ * Eg. ./components/AppHome.vue -> <example-component></example-component>
  */
 
 // const files = require.context('./', true, /\.vue$/i);
@@ -31,8 +31,8 @@ Vue.use(Vuetify)
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-Vue.component('ExampleComponent',require('./components/ExampleComponent.vue'));
-import router from 'Router/router.js'
+Vue.component('AppHome',require('./components/AppHome.vue').default);
+import router from './Router/router'
 const app = new Vue({
     el: '#app',
     router
