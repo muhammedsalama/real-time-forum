@@ -3,7 +3,6 @@
         <v-form @submit.prevent="login">
             <v-text-field
                     v-model="form.email"
-                    v-validate="'required|email'"
                     label="E-Mail"
                     data-vv-name="name"
                     type="email"
@@ -11,7 +10,6 @@
             ></v-text-field>
             <v-text-field
                     v-model="form.password"
-                    v-validate="'required'"
                     label="Password"
                     data-vv-name="password"
                     type="password"
@@ -26,6 +24,7 @@
 </template>
 
 <script>
+
     export default {
         data() {
             return {
@@ -35,10 +34,9 @@
                 }
             }
         },
-        methods:{
-            login(){
-                axios.post('/api/auth/login',this.form).then(res=>console.log(res.data)).catch(error=>console.log(error.response.data))
-                
+        methods: {
+            login() {
+              User.login(this.form)
             }
         }
     }
